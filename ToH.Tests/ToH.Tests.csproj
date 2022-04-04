@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
-	<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+	
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <Nullable>enable</Nullable>
-
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
         <IsPackable>false</IsPackable>
     </PropertyGroup>
 
