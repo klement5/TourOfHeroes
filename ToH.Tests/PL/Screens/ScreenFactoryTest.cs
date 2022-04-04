@@ -64,10 +64,10 @@ public class ScreenFactoryTest
         };
         
         // Act
-        HeroScreen screen = (HeroScreen) _uut.CreateScreen(typeof(HeroScreen), hero);
+        HeroScreen screen = (HeroScreen) _uut.CreateScreen(typeof(HeroScreen), hero)!;
 
         // Assert
-        Assert.Equal(hero, screen.Hero);
+        Assert.Equal(hero, screen!.Hero);
     }
     
     [Fact]
@@ -87,11 +87,11 @@ public class ScreenFactoryTest
         };
         
         // Act
-        var screen = (HeroScreen) _uut.CreateScreen(typeof(HeroScreen), hero2);
+        var screen = (HeroScreen) _uut.CreateScreen(typeof(HeroScreen), hero2)!;
 
 
         // Assert
-        Assert.Equal(hero2, screen.Hero);
+        Assert.Equal(hero2, screen!.Hero);
     }
 
     [Fact]

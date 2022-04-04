@@ -9,7 +9,7 @@ public class Ui : IUi, IObserver
 {
     private readonly Controller _controller;
     private readonly ILog _log;
-    private Screen _screen;
+    private Screen _screen = null!;
 
     public Screen Screen
     {
@@ -24,7 +24,7 @@ public class Ui : IUi, IObserver
 
     public Ui(Controller controller, Screen? screen, ILog log, IScreenFactory screenFactory)
     {
-        Screen = screen;
+        Screen = screen!;
         ScreenFactory = screenFactory;
         _controller = controller;
         _log = log;

@@ -32,7 +32,7 @@ public class UiTest
         var uut = new Ui(_controller.Object, screen.Object, _log.Object, _screenFactory.Object);
 
         // Assert
-        screen.Verify(screen => screen.Init(), Times.Once);
+        screen.Verify(screen => screen!.Init(), Times.Once);
     }
     
     [Fact]
@@ -45,7 +45,7 @@ public class UiTest
         uut.Update();
         
         // Assert
-        _screen.Verify(screen => screen.None(It.Is<Ui>(ui => ui.Equals(uut))), Times.Once);
+        _screen.Verify(screen => screen!.None(It.Is<Ui>(ui => ui.Equals(uut))), Times.Once);
     }
     
     [Fact]
@@ -58,7 +58,7 @@ public class UiTest
         uut.Update();
         
         // Assert
-        _screen.Verify(screen => screen.Down(It.Is<Ui>(ui => ui.Equals(uut))), Times.Once);
+        _screen.Verify(screen => screen!.Down(It.Is<Ui>(ui => ui.Equals(uut))), Times.Once);
     }
     
     [Fact]
@@ -71,7 +71,7 @@ public class UiTest
         uut.Update();
         
         // Assert
-        _screen.Verify(screen => screen.Up(It.Is<Ui>(ui => ui.Equals(uut))), Times.Once);
+        _screen.Verify(screen => screen!.Up(It.Is<Ui>(ui => ui.Equals(uut))), Times.Once);
     }
     
     [Fact]
@@ -84,7 +84,7 @@ public class UiTest
         uut.Update();
         
         // Assert
-        _screen.Verify(screen => screen.Enter(It.Is<Ui>(ui => ui.Equals(uut))), Times.Once);
+        _screen.Verify(screen => screen!.Enter(It.Is<Ui>(ui => ui.Equals(uut))), Times.Once);
     }
 
 }
